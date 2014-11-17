@@ -1,0 +1,10 @@
+C:\Users\ShOnZi\Desktop\TelerikAcademy\ASP.NET MVC\Homework\ForumSystem-master\Data\ForumSystem.Data.Common\bin\Debug\ForumSystem.Data.Common.dll.config
+C:\Users\ShOnZi\Desktop\TelerikAcademy\ASP.NET MVC\Homework\ForumSystem-master\Data\ForumSystem.Data.Common\bin\Debug\ForumSystem.Data.Common.dll
+C:\Users\ShOnZi\Desktop\TelerikAcademy\ASP.NET MVC\Homework\ForumSystem-master\Data\ForumSystem.Data.Common\bin\Debug\ForumSystem.Data.Common.pdb
+C:\Users\ShOnZi\Desktop\TelerikAcademy\ASP.NET MVC\Homework\ForumSystem-master\Data\ForumSystem.Data.Common\bin\Debug\EntityFramework.dll
+C:\Users\ShOnZi\Desktop\TelerikAcademy\ASP.NET MVC\Homework\ForumSystem-master\Data\ForumSystem.Data.Common\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ShOnZi\Desktop\TelerikAcademy\ASP.NET MVC\Homework\ForumSystem-master\Data\ForumSystem.Data.Common\bin\Debug\EntityFramework.xml
+C:\Users\ShOnZi\Desktop\TelerikAcademy\ASP.NET MVC\Homework\ForumSystem-master\Data\ForumSystem.Data.Common\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ShOnZi\Desktop\TelerikAcademy\ASP.NET MVC\Homework\ForumSystem-master\Data\ForumSystem.Data.Common\obj\Debug\ForumSystem.Data.Common.csprojResolveAssemblyReference.cache
+C:\Users\ShOnZi\Desktop\TelerikAcademy\ASP.NET MVC\Homework\ForumSystem-master\Data\ForumSystem.Data.Common\obj\Debug\ForumSystem.Data.Common.dll
+C:\Users\ShOnZi\Desktop\TelerikAcademy\ASP.NET MVC\Homework\ForumSystem-master\Data\ForumSystem.Data.Common\obj\Debug\ForumSystem.Data.Common.pdb

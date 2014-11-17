@@ -1,0 +1,5 @@
+C:\Users\ShOnZi\Desktop\TelerikAcademy\ASP.NET MVC\Homework\ForumSystem-master\ForumSystem.Common\bin\Debug\ForumSystem.Common.dll
+C:\Users\ShOnZi\Desktop\TelerikAcademy\ASP.NET MVC\Homework\ForumSystem-master\ForumSystem.Common\bin\Debug\ForumSystem.Common.pdb
+C:\Users\ShOnZi\Desktop\TelerikAcademy\ASP.NET MVC\Homework\ForumSystem-master\ForumSystem.Common\obj\Debug\ForumSystem.Common.csprojResolveAssemblyReference.cache
+C:\Users\ShOnZi\Desktop\TelerikAcademy\ASP.NET MVC\Homework\ForumSystem-master\ForumSystem.Common\obj\Debug\ForumSystem.Common.dll
+C:\Users\ShOnZi\Desktop\TelerikAcademy\ASP.NET MVC\Homework\ForumSystem-master\ForumSystem.Common\obj\Debug\ForumSystem.Common.pdb
