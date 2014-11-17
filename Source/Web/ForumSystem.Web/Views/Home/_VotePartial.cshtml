@@ -1,0 +1,67 @@
+﻿@using ForumSystem.Web.ViewModels.Home;
+@using Microsoft.AspNet.Identity;
+
+@model IndexBlogPostViewModel
+@{
+    string voteBtnsClass = "";
+    string backBtnClass = "";
+}
+@if (@Model.Votes.Any(v => v.VoterId == this.User.Identity.GetUserId()))
+{
+    voteBtnsClass = "none";
+    backBtnClass = "block";
+}
+else
+{
+    voteBtnsClass = "block";
+    backBtnClass = "none";
+}
+
+
+<div class="well text-center">
+    @if (Request.IsAuthenticated)
+    {
+        using (Ajax.BeginForm("UpVote", "Home", new { Id = Model.Id }, new AjaxOptions { UpdateTargetId = "votes-container" + @Model.Id, InsertionMode = InsertionMode.Replace, OnSuccess = "hideVoteBtns" }, new { @class = "form-horizontal", role = "form" }))
+        {
+                    @Html.AntiForgeryToken()
+                    <div class="vote-btns" style="display:@voteBtnsClass">
+                        <input id="post-btn" class="btn btn-primary btn-sm" type="submit" value="+" />
+                    </div>
+
+        }
+        <div style="height:10px"></div>
+        using (Ajax.BeginForm("DownVote", "Home", new { Id = Model.Id }, new AjaxOptions { UpdateTargetId = "votes-container" + @Model.Id, InsertionMode = InsertionMode.Replace, OnSuccess = "showVoteBtns" }, new { @class = "form-horizontal", role = "form" }))
+        {
+                    @Html.AntiForgeryToken()
+
+                    <div class="vote-btns" style="display:@voteBtnsClass">
+                        <input id="post-btn" class="btn btn-primary btn-sm" type="submit" value="-" />
+                    </div>
+
+        }
+        using (Ajax.BeginForm("CancelVote", "Home", new { Id = Model.Id }, new AjaxOptions { UpdateTargetId = "votes-container" + @Model.Id, InsertionMode = InsertionMode.Replace, OnSuccess = "showVoteBtns" }, new { @class = "form-horizontal", role = "form" }))
+        {
+                    @Html.AntiForgeryToken()
+
+                    <div id="back-btn" style="display:@backBtnClass">
+                        <input id="post-btn" class="btn btn-danger btn-sm" type="submit" value="X" />
+                    </div>
+            
+        }
+    }
+    <div class="row">
+    
+        @if (@Model.Votes.Where(v => v.IsUpvote).Count() - @Model.Votes.Where(v => !v.IsUpvote).Count() > 0)
+        {
+            <span>+</span>
+        }
+        <span id="votes-number">@(Model.Votes.Where(v => v.IsUpvote).Count() - @Model.Votes.Where(v => !v.IsUpvote).Count())</span>
+
+    </div>
+
+    <div class="row">votes</div>
+</div>
+
+<script>
+
+</script>

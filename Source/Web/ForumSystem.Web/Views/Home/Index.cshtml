@@ -1,0 +1,67 @@
+﻿@model IEnumerable<ForumSystem.Web.ViewModels.Home.IndexBlogPostViewModel>
+@{
+    this.ViewBag.Title = "Home Page";
+}
+<div class="container">
+    @foreach (var post in Model)
+    {
+<div class="row">
+<div class="col-md-1">
+<div id="votes-container@post.Id">
+    @{
+        Html.RenderPartial("_VotePartial", post);
+    }
+</div>
+
+</div>
+<div class="col-md-1">
+<div class="well text-center">
+    <div class="row">0</div>
+    <div class="row">answers</div>
+</div>
+</div>
+<div class="col-md-1">
+<div class="well text-center">
+    <div class="row">0</div>
+    <div class="row">answers</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="row">
+    <h4>
+        <a href="/123/asd-asd-asd">@post.Title</a>
+    </h4>
+</div>
+<div class="row">
+    <p>asked 35 minutes ago in Kids Academy - програмиране за деца by a.dimitrov04 (40 points)</p>
+</div>
+<div class="row">
+    @foreach (var item in post.Tags)
+    {
+            <span class="label label-default">@item.Name</span>
+    }
+</div>
+</div>
+</div>
+<hr />
+    }
+</div>
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            setInterval(function () {
+                $('#success-message').fadeOut(2000);
+            }, 2000);
+        });
+        function hideVoteBtns() {
+            $("#back-btn").show();
+            $(".vote-btns").hide();
+        };
+        function showVoteBtns() {
+            $(".vote-btns").show();
+            $("#back-btn").hide();
+        };
+    </script>
+}        
+    
+

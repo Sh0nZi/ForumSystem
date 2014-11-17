@@ -1,0 +1,42 @@
+﻿
+@using PagedList.Mvc;
+
+@model PagedList.IPagedList<ForumSystem.Web.ViewModels.Feedbacks.FeedbackDisplayViewModel>
+
+@{
+    ViewBag.Title = "Feedbacks";
+}
+
+
+<h2>@ViewBag.Title</h2>
+
+<div class="container table table-striped">
+    <div>
+        <div class="row">
+            <div class="col-md-2">
+                <b>Author</b>
+            </div>
+            <div class="col-md-4">
+                <b>Title</b>
+            </div>
+            <div class="col-md-4">
+                <b>Content</b>
+            </div>
+            <div class="col-md-2">
+                <b>Created On</b>
+            </div>
+            @foreach (var feedback in Model)
+            {
+                            <div class="col-md-2">@(feedback.AuthorName != null ? feedback.AuthorName.Substring(0, feedback.AuthorName.IndexOf("@")) : "Anonymous")</div>
+                            <div class="col-md-4">@feedback.Title</div>
+                            <div class="col-md-4"> @Html.Raw(HttpUtility.HtmlDecode(feedback.Content));</div>
+                            <div class="col-md-2">@feedback.CreatedOn</div>
+                            <hr />
+            }
+        </div>
+    </div>
+
+    @Html.PagedListPager(Model, page => Url.Action("Display", "PageableFeedbackList",
+                        new { page}), PagedListRenderOptions.OnlyShowFivePagesAtATime)
+</div>
+
